@@ -1,0 +1,21 @@
+SWYNEX Task 1 — Anonymous SMB Access Evidence
+
+Target: 192.168.56.101
+Command:
+smbclient -L //192.168.56.101 -N
+
+Output:
+Anonymous login successful
+Sharename       Type      Comment
+print$          Disk      Printer Drivers
+tmp             Disk      oh noes!
+opt             Disk
+IPC$            IPC       IPC Service (metasploitable server (Samba 3.0.20-Debian))
+ADMIN$          IPC       IPC Service (metasploitable server (Samba 3.0.20-Debian))
+Reconnecting with SMB1 for workgroup listing.
+Anonymous login successful
+...
+WORKGROUP
+
+Assessment:
+The SMB service accepted an unauthenticated/anonymous session and exposed share information. This was observed only against the intentionally vulnerable Metasploitable 2 laboratory target.
