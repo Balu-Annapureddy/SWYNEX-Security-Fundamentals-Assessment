@@ -1,0 +1,12 @@
+SWYNEX Task 1 — Broad NFS Export Evidence
+
+Target: 192.168.56.101
+Command:
+showmount -e 192.168.56.101
+
+Output:
+Export list for 192.168.56.101:
+/ *
+
+Assessment:
+The NFS service advertised a root filesystem export to all hosts. This was observed only against the intentionally vulnerable Metasploitable 2 laboratory target.
