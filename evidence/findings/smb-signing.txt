@@ -1,0 +1,16 @@
+# Nmap 7.99 scan initiated Tue Sep 29 03:51:12 2026 as: /usr/lib/nmap/nmap --privileged -p445 --script smb-security-mode -oN evidence/findings/smb-signing.txt 192.168.56.101
+Nmap scan report for 192.168.56.101
+Host is up (0.020s latency).
+
+PORT    STATE SERVICE
+445/tcp open  microsoft-ds
+MAC Address: 08:00:27:7B:20:7F (Oracle VirtualBox virtual NIC)
+
+Host script results:
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+
+# Nmap done at Tue Sep 29 03:51:15 2026 -- 1 IP address (1 host up) scanned in 2.96 seconds
