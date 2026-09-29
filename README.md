@@ -39,22 +39,47 @@ Testing was limited to the intentionally vulnerable laboratory target.
 - [F-04 — SMB Message Signing Disabled](evidence/findings/smb-signing.txt)
 - [Nmap vulnerability scan](evidence/findings/nmap-vulnerability-scan.txt)
 
-## Screenshots
+## Visual Evidence
 
-The repository should contain screenshots captured directly from the authorized Kali/Metasploitable 2 lab. Screenshots are intended to visually support the raw command-output evidence above.
+The following screenshots were captured directly from the authorized Kali/Metasploitable 2 laboratory session and correspond to the command-output evidence stored in this repository.
 
-Recommended screenshot set:
+### 01 — Host Discovery
 
-1. **01-host-discovery.png** — successful connectivity / host discovery of 192.168.56.101
-2. **02-full-port-scan.png** — Nmap service enumeration showing the exposed attack surface
-3. **03-anonymous-ftp.png** — anonymous FTP validation
-4. **04-anonymous-smb.png** — anonymous SMB share enumeration
-5. **05-nfs-export.png** — NFS export enumeration showing the broad export
-6. **06-smb-signing.png** — SMB signing disabled
+![Host discovery evidence](screenshots/01-host-discovery.png)
 
-Place the files under [screenshots/](screenshots/) and embed the six images here once the actual lab captures have been added.
+Successful connectivity to the Metasploitable 2 target at `192.168.56.101`.
 
-> **Evidence integrity:** screenshots should be real captures from the authorized lab session, not generated or reconstructed images.
+### 02 — Full Port and Service Scan
+
+![Full port scan evidence](screenshots/02-full-port-scan.png)
+
+Full TCP port and service enumeration of the authorized training target.
+
+### 03 — Anonymous FTP
+
+![Anonymous FTP evidence](screenshots/03-anonymous-ftp.png)
+
+Validation of anonymous FTP access on port 21.
+
+### 04 — Anonymous SMB
+
+![Anonymous SMB evidence](screenshots/04-anonymous-smb.png)
+
+Validation of anonymous SMB share enumeration.
+
+### 05 — NFS Export
+
+![NFS export evidence](screenshots/05-nfs-export.png)
+
+NFS export enumeration showing the configured broad export.
+
+### 06 — SMB Signing
+
+![SMB signing evidence](screenshots/06-smb-signing.png)
+
+Validation that SMB message signing is disabled.
+
+> **Evidence integrity:** Screenshots are real captures from the authorized laboratory session and were not generated or reconstructed.
 
 ## Detailed Report
 
